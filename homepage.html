@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    p {
+      font-size: small;
+    }
+
+    .logo {
+      width: 100px;
+      height: 60px;
+    }
+
+    .header {
+      position: relative;
+      background-image: url('https://i.pinimg.com/originals/d6/6f/c8/d66fc8229ccb24fbb72c978672fa6715.jpg');
+      padding: 200px 70px 200px 70px;
+      filter: brightness(100%);
+    }
+
+    .header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('https://i.pinimg.com/originals/d6/6f/c8/d66fc8229ccb24fbb72c978672fa6715.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(30%);
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .card:hover {
+      background-color: grey;
+      transform: scale(0.95);
+    }
+
+    .card {
+      transition: transform 0.3s;
+    }
+  </style>
+
+  <title>Autobus BS5</title>
+</head>
+
+<body style="background-color: #f5f5f5">
+    <div class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container d-flex justify-content-between">
+
+        <a class="navbar-brand col-9 col-lg-2" href="homepage.html">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipNlh2B3N9MuNwOh-AP4-1Qm4MiLe_sOsFCorOce=s1280-p-no-v1"
+            alt="Logo" class="logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-building"></i>Kompania</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-book"></i>Rezervimi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-phone"></i>Kontakt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-user"></i>Llogaria ime</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-user-plus"></i>Regjistrohu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-blog"></i>Book a
+                trip</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-blog"></i>Sign in as
+                admin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="col-12 col-lg-9 m-auto">
+        <div class="row border p-3 rounded bg-light form-group">
+          <div class="col-12 col-lg ">
+            <label for="start">Starting point</label>
+            <input type="text" class="form-control" id="start" placeholder="Enter start point">
+          </div>
+
+          <div class="col-12 col-lg">
+            <label for="end">Destination</label>
+            <input type="text" class="form-control" id="end" placeholder="Enter destination">
+          </div>
+
+          <div class="col-12 col-lg">
+            <label for="date">Trip Date</label>
+            <input type="date" class="form-control" id="date" placeholder="Enter date">
+          </div>
+
+          <div class="col-12 col-lg">
+            <label for="guests">Guests</label>
+            <input type="number" class="form-control" id="guests" placeholder="Enter guests number">
+          </div>
+
+          <div class="col-12 col-lg text-center mb-0">
+            <br>
+            <a href="tickets.html" class="btn btn-outline-primary">Search</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="bg-white">
+      <section class="container col-12 col-lg-9 py-5">
+        <article>
+          <h1>How to find cheap tickets</h1>
+          <p class="display lead">
+            If you're in search of the finest bus bargains
+            for your travels, YourCompany has got you covered! You can explore promotions
+            from countless bus operators and a plethora of bus routes across the
+            United States and internationally. Following that, you have the option
+            to compare schedules for arrivals and departures, pickup and drop-off locations,
+            travel durations, and, naturally, the most competitive bus fare options.
+            <br> <br>
+            To simplify your search even further, you can tailor everything to your
+            preferences. Fine-tune your outcomes by sorting them based on price, departure
+            and arrival times, and/or use filters to specify stops or bus operators.
+            Once you've discovered the ideal bus journey, all that's left to do is select it
+            and make your reservation on our partner's platform!
+          </p>
+        </article>
+        <br>
+        <div class="row  justify-content-around">
+          <div class="col-10 col-lg-3 d-flex py-3 ">
+            <div class="col-3"> <img src="https://i.checkmybus.com/images/icons/world60.webp"></div>
+            <div class="col"> <b>over 50 countries worldwide</b></div>
+          </div>
+
+          <div class="col-10 col-lg-3 d-flex py-3">
+            <div class="col-3"> <img src="https://i.checkmybus.com/images/icons/city60.webp"></div>
+            <div class="col"> <b>over 50,000 cities worldwide</b></div>
+          </div>
+
+          <div class="col-10 col-lg-3 d-flex py-3">
+            <div class="col-3"> <img src="https://i.checkmybus.com/images/icons/station60.webp"></div>
+            <div class="col"> <b>over 85,000 bus stations worldwide</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <section class="container col-12 col-lg-9 p-5">
+      <h4 class="text-center">Main Destinations</h4>
+      <div class="row">
+        <div class="col-lg-4">
+          <a class="card" href="#">
+            <img src="https://a.cdn-hotels.com/gdcs/production6/d781/3bae040b-2afb-4b11-9542-859eeb8ebaf1.jpg"
+              class="card-img">
+          </a>
+          <div class="card-body">
+            <h5 class='card-title'>Istanbul</h5>
+            <p class="card-text">Rezervo bilete</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <a class="card" href="#">
+            <img src="https://udheto.com.al/wp-content/uploads/2021/10/termet1-675x450.jpg" class="card-img">
+          </a>
+          <div class="card-body">
+            <h5 class='card-title'>Selanik</h5>
+            <p class="card-text">Rezervo bilete</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <a class="card" href="#">
+            <img
+              src="https://www.italia.it/content/dam/tdh/en/interests/lombardia/milano/milano-in-48-ore/media/20220119115535-piazza-del-duomo-all-alba-milano-lombardia-shutterstock-1161075943-rid.jpg"
+              class="card-img">
+          </a>
+          <div class="card-body">
+            <h5 class='card-title'>Milano</h5>
+            <p class="card-text">Rezervo bilete</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <a class="card" href="#">
+            <img src="https://studyinginswitzerland.com/wp-content/uploads/2022/02/Lugano-city.jpg" class="card-img">
+          </a>
+          <div class="card-body">
+            <h5 class='card-title'>Lugano</h5>
+            <p class="card-text">Rezervo bilete</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <a class="card" href="#">
+            <img
+              src="https://www.muenchen.de/sites/default/files/styles/3_2_w1008/public/2022-07/marienplatz-750.jpg.webp"
+              class="card-img">
+          </a>
+          <div class="card-body">
+            <h5 class='card-title'>Munich</h5>
+            <p class="card-text">Rezervo bilete</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <a class="card" href="#">
+            <img src="https://scratchyourmapa.com/wp-content/uploads/2023/01/Prizren-Kosovo-Danni-and-Fede.jpg"
+              class="card-img">
+          </a>
+          <div class="card-body">
+            <h5 class='card-title'>Prizren</h5>
+            <p class="card-text">Rezervo bilete</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-white mt-5 py-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Lokacioni</h4>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d-86.123456!3d39.987654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQxJzEwLjkiTiA4NsKwMjMnMjUuMCJX!5e0!3m2!1sen!2sus!4v1609378797385!5m2!1sen!2sus"
+              width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+              tabindex="0"></iframe>
+          </div>
+          <div class="col-md-4">
+            <h4>Adresa e Zyres</h4>
+            <address>
+              <strong>Office 1:</strong><br>
+              123 Main St<br>
+              City, State 12345<br><br>
+              <strong>Office 2:</strong><br>
+              456 Elm St<br>
+              City, State 67890
+            </address>
+          </div>
+          <div class="col-md-4">
+            <h4>Kontakti</h4>
+            <p>Email: info@example.com</p>
+            <p>Numri i Telefonit: (123) 456-7890</p>
+          </div>
+        </div>
+      </div>
+      <p class="d-flex justify-content-center font-weight-bold mt-3">Copyright &copy; 2023 - Sistemi i Biletimit
+        Elektronik te Biletave te Autobusit. Te gjitha te drejtat e rezervuara.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

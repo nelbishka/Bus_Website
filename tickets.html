@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        p {
+            font-size: small;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .logo {
+            width: 100px;
+            height: 60px;
+        }
+
+        .header {
+            position: relative;
+            background-image: url('https://i.pinimg.com/originals/d6/6f/c8/d66fc8229ccb24fbb72c978672fa6715.jpg');
+            padding: 70px;
+            filter: brightness(100%);
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://i.pinimg.com/originals/d6/6f/c8/d66fc8229ccb24fbb72c978672fa6715.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(30%);
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .btn.reset{
+            background-color: #e5e5e5;
+        }
+
+        .btn.reset:hover{
+            background-color: #bab5b5;
+        }
+    </style>
+
+    <title>Bus Tickets</title>
+</head>
+
+
+<body style="background-color: #f5f5f5">
+
+    <div class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container d-flex justify-content-between">
+
+            <a class="navbar-brand col-9 col-md-2" href="homepage.html">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipNlh2B3N9MuNwOh-AP4-1Qm4MiLe_sOsFCorOce=s1280-p-no-v1"
+                    alt="Logo" class="logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-building"></i>Kompania</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-book"></i>Rezervimi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-phone"></i>Kontakt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-user"></i>Llogaria ime</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-user-plus"></i>Regjistrohu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-blog"></i>Book a
+                            trip</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-blog"></i>Sign in as
+                            admin</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="col-12 col-lg-9 m-auto">
+            <div class="row border p-3 rounded bg-light">
+                <div class="col-12 col-lg">
+                    <label for="start">Starting point</label>
+                    <input type="text" class="form-control" id="start" placeholder="Enter start point">
+                </div>
+
+                <div class="col-12 col-lg">
+
+                    <label for="end">Destination</label>
+                    <input type="text" class="form-control" id="end" placeholder="Enter destination">
+                </div>
+
+                <div class="col-12 col-lg">
+
+                    <label for="date">Trip Date</label>
+                    <input type="date" class="form-control" id="date" placeholder="Enter date">
+                </div>
+
+                <div class="col-12 col-lg">
+
+                    <label for="guests">Guests</label>
+                    <input type="number" class="form-control" id="guests" placeholder="Enter guests number">
+                </div>
+
+                <div class="col-12 col-lg text-center mb-0">
+                    <br>
+                    <button class="btn btn-outline-primary">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container col-12 col-lg-9 p-5">
+        <div class="row rounded">
+            <div class="col-12 col-lg-3 border rounded shadow py-3 bg-white">
+                <div>
+                    <label for="range" class="form-label">Price</label>
+                    <label type="button" class="btn reset float-end">Reset</label>
+                </div>
+
+                <div class="text-center">
+                    <input type="range" class="range" id="range" min="1000" max="6000" value="2000" step="500">
+                </div>
+
+                <div class="form-check p-0">
+                    <h6 class="border-top">BUS TYPES</h6>
+                    <ul>
+                        <li>
+                            <input class="form-check-input" type="checkbox" id="check1">
+                            <label class="form-check-label" for="check1">BUSINESS-CLASS</label>
+                        </li>
+
+                        <li>
+                            <input class="form-check-input" type="checkbox" id="check2">
+                            <label class="form-check-label" for="check2">NON-AC</label>
+                        </li>
+
+                        <li>
+                            <input class="form-check-input" type="checkbox" id="check3">
+                            <label class="form-check-label" for="check3">LOCAL</label>
+
+                        </li>
+
+                        <li>
+                            <input class="form-check-input" type="checkbox" id="check4">
+                            <label class="form-check-label" for="check4">WORLD-CLASS</label>
+                        </li>
+
+                    </ul>
+
+                    <h6 class="border-top">DEPARTURE TIME</h6>
+                    <ul>
+                        <li><input class="form-check-input" type="checkbox" id="check-d1">
+                            <label class="form-check-label" for="check-d1">06:00 AM - 09:30 AM</label>
+                        </li>
+
+                        <li><input class="form-check-input" type="checkbox" id="check-d2">
+                            <label class="form-check-label" for="check-d2">09:00 AM - 11:00 AM</label>
+                        </li>
+                    </ul>
+
+                    <h6 class="border-top">ARRIVAL TIME</h6>
+                    <ul>
+                        <li>
+                            <input class="form-check-input" type="checkbox" id="check-a1">
+                            <label class="form-check-label" for="check-a1">01:00 PM - 03:00 PM</label>
+                        </li>
+
+                        <li>
+                            <input class="form-check-input" type="checkbox" id="check-a2">
+                            <label class="form-check-label" for="check-a2">03:00 PM - 06:00 PM</label>
+                        </li>
+                    </ul>
+
+                    <div>
+                        <img src="https://bus365demo.bdtask-demo.com/backend//public/image/add/1656243290_54a91ec1ebe9ad09ed62.jpg"
+                            class="img-fluid">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-9 px-3 ">
+                <div class="row  border rounded mb-2 pt-4 bg-white">
+                    <div class="col col-lg text-center">
+                        <i class="fa-solid fa-bus fa-xl"></i>
+                        <p>Kompania</p>
+                    </div>
+
+                    <div class="col col-lg text-center">
+                        <i class="fa-solid fa-circle-arrow-right fa-xl"></i>
+                        <p>Nisja</p>
+                    </div>
+
+                    <div class="col col-lg text-center">
+                        <i class="fa-solid fa-hourglass-end fa-xl "></i>
+                        <p>Kohezgjatja</p>
+                    </div>
+
+                    <div class="col col-lg text-center">
+                        <i class="fa-solid fa-flag-checkered fa-xl"></i>
+                        <p>Destinacioni</p>
+                    </div>
+
+                    <div class="col col-lg text-center">
+                        <i class="fa-solid fa-coins fa-xl"></i>
+                        <p>Cmimi</p>
+                    </div>
+                </div>
+
+                <div class="row p-4 border rounded shadow bg-white " id="tickets">
+
+                    <div class="col col-lg">
+                        <img src="https://www.autobus.al/resources/uploads/operators/alvavel_skenderbeu_alpar.png"
+                            class="img-fluid">
+                    </div>
+                    <div class="col col-lg">
+                        <i class="fa-solid fa-location-dot fa-l"></i>
+                        <h5 class=" d-inline">Tirana</h5>
+                        <h5 class="d-inline">05:00</h5>
+                        <p class="text-secondary">Terminali Nderkombetar i Autobusave</p>
+                    </div>
+                    <div class="col col-lg text-center">
+                        <i class="fa-solid fa-right-long fa-l"></i>
+                        <div>
+                            <p>11:00</p>
+                        </div>
+                    </div>
+                    <div class="col col-lg">
+                        <i class="fa-solid fa-location-dot fa-l"></i>
+                        <h5 class=" d-inline">Selanik</h5>
+                        <h5 class="d-inline">16:00</h5>
+                        <p class="text-secondary">Stacioni i Trenit</p>
+                    </div>
+                    <div class="col-12 col-lg text-center m-auto p-0">
+                        <a href="reservation.html" class="btn btn-outline-primary"><small>Rezervo</small></a>
+                    </div>
+
+                    <div class="col-12  d-md-flex text-center justify-content-between">
+                        <div>
+                            <p class="text-danger d-inline">Linja: </p>
+                            <p class="d-inline">Shkoder - Veria - Selanik (Linja 1)</p>
+                        </div>
+                        <div>
+                            <p class="text-danger d-inline">Pika doganore: </p>
+                            <p class="d-inline">Kapshtice</p>
+                        </div>
+                        <div>
+                            <a href="#" class="text-danger">
+                                <p class="d-inline">Rregullat e Linjes</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row p-4 mt-2 border rounded shadow bg-white ">
+                    <div class="col col-lg">
+                        <img src="https://www.autobus.al/resources/uploads/operators/alvavel_skenderbeu_alpar.png"
+                            class="img-fluid ">
+                    </div>
+                    <div class="col col-lg">
+                        <i class="fa-solid fa-location-dot fa-l"></i>
+                        <h5 class=" d-inline">Tirana</h5>
+                        <h5 class="d-inline">08:30</h5>
+                        <p class="text-secondary">Terminali Nderkombetar i Autobusave</p>
+                    </div>
+                    <div class="col col-lg text-center">
+                        <i class="fa-solid fa-right-long fa-l"></i>
+                        <div>
+                            <p>10:30</p>
+                        </div>
+                    </div>
+                    <div class="col col-lg">
+                        <div>
+                            <i class="fa-solid fa-location-dot fa-l"></i>
+                            <h5 class="d-inline">Selanik</h5>
+                            <h5 class="d-inline">19:00</h5>
+                            <p class="text-secondary">Stacioni i Trenit</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg text-center m-auto p-0">
+                        <a href="reservation.html" class="btn btn-outline-primary"><small>Rezervo</small></a>
+                    </div>
+                    <div class="col-12 d-md-flex text-center justify-content-between">
+                        <div>
+                            <p class="text-danger d-inline">Linja: </p>
+                            <p class="d-inline">Shkoder - Veria - Selanik (Linja 2)</p>
+                        </div>
+                        <div>
+                            <p class="text-danger d-inline">Pika doganore: </p>
+                            <p class="d-inline">Kapshtice</p>
+                        </div>
+                        <div>
+                            <a href="#" class="text-danger">
+                                <p class="d-inline">Rregullat e Linjes</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white mt-5 py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Lokacioni</h4>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d-86.123456!3d39.987654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQxJzEwLjkiTiA4NsKwMjMnMjUuMCJX!5e0!3m2!1sen!2sus!4v1609378797385!5m2!1sen!2sus"
+                        width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="col-md-4">
+                    <h4>Adresa e Zyres</h4>
+                    <address>
+                        <strong>Office 1:</strong><br>
+                        123 Main St<br>
+                        City, State 12345<br><br>
+                        <strong>Office 2:</strong><br>
+                        456 Elm St<br>
+                        City, State 67890
+                    </address>
+                </div>
+                <div class="col-md-4">
+                    <h4>Kontakti</h4>
+                    <p>Email: info@example.com</p>
+                    <p>Numri i Telefonit: (123) 456-7890</p>
+                </div>
+            </div>
+        </div>
+        <p class="text-center mt-3">Copyright &copy; 2023 - Sistemi i Biletimit
+            Elektronik te Biletave te Autobusit. Te gjitha te drejtat e rezervuara.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
